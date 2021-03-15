@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" prefHeight="668.0" prefWidth="851.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DataSourceDB">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="600.0" prefWidth="752.0">
+         <children>
+            <HBox prefHeight="251.0" prefWidth="752.0">
+               <children>
+                  <TextField fx:id="query_field" alignment="TOP_LEFT" prefHeight="251.0" prefWidth="559.0" text="select first_name, last_name from employees;">
+                     <padding>
+                        <Insets right="50.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="submit_button" mnemonicParsing="false" onAction="#ButtonClick" prefHeight="63.0" prefWidth="83.0" text="Go">
+                     <HBox.margin>
+                        <Insets top="100.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="tableView" prefHeight="350.0" prefWidth="752.0">
+              <columns>
+                <TableColumn fx:id="col_first" prefWidth="75.0" text="First" />
+                <TableColumn fx:id="col_last" prefWidth="75.0" text="Last" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
